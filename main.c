@@ -1,6 +1,6 @@
 //
 //  main.c
-//  10_P5
+//  10_P6
 //
 //  Created by ok sojoung on 2023/11/09.
 //
@@ -9,21 +9,21 @@
 #include <string.h>
 
 int main(void){
-    FILE* fp;
-    char str[100];
-    // 파일열기
-    fp = fopen("/Users/okso/sample.txt", "w");
-     
-    // 파일에 입력받은 값 쓰기
-    for(int i=0; i<3; i++)
+    FILE* fp = NULL;
+    char c;
+    
+    fp = fopen("/Users/okso/sample.txt", "r");
+    if(fp == NULL)
     {
-        printf("Input a word:");
-        scanf("%s", str);
-        
-        fprintf(fp, "%s\n", str);
+        printf("파일을 못열음\n");
+        return 0;
     }
     
-    // 파일 닫기
+    while ( (c=fgetc(fp)) != EOF)
+    {
+        putchar(c);
+    }
+     
     fclose(fp);
     
     return 0;
