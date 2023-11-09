@@ -1,14 +1,16 @@
 //
 //  main.c
-//  10
+//  10_P1
 //
 //  Created by ok sojoung on 2023/11/09.
 //
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+int main(void){
+    char    code1 = 'A';
+    int     code2 = 65;
+    
+    printf("code1 = %c, (%d)\n", code1, code1);
+    printf("code2 = %c, (%d)\n", code2, code2);
 }
